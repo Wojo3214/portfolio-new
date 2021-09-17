@@ -110,8 +110,7 @@ h1{
 }
 
 .nav > a{
-    flex: 1 1 50%;
-    margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 .nav>a>img{
@@ -124,7 +123,6 @@ h1{
     flex-direction: column;
     align-items: center;
     width: 100%;
-    flex: 1 1 100%;
 
 }
 
@@ -257,7 +255,7 @@ h1{
 .main-project{
     background: var(--bg-slepfy-gradient);
     position: relative;
-    height: 400px;
+    height: auto;
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -270,6 +268,7 @@ h1{
 
 .main-project img{
     width: 100%;
+    margin-top: 40px;
     align-self: flex-end;
 }
 
@@ -764,7 +763,7 @@ box-shadow: 5px 5px 23px 5px rgba(38,38,38,0.3);
 
     .nav > a{
         flex: none;
-        margin-top: 0;
+        margin-bottom: 0;
     }
 
     .nav>a>img{
@@ -900,18 +899,13 @@ box-shadow: 5px 5px 23px 5px rgba(38,38,38,0.3);
         width: 48%;
     }
 
-    .main-project{
-        height: 500px;
-    }
-    
-
     .main-project-container{
         flex-direction: row;
     }
 
     .main-project img{
-        height: 400px;
-        width: auto;
+        height: auto;
+        width: 65%;
     }
 
     .main-project-container h3, 
@@ -923,11 +917,13 @@ box-shadow: 5px 5px 23px 5px rgba(38,38,38,0.3);
     .main-project-container h3{
         flex: 1;
         font-size: 36px;
+        margin-left: 5%;
     }
 
     .main-project-container p{
         flex: 1;
         width: 200px;
+        margin-right: 5%;
     }
 
     .contact-items{

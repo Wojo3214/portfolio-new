@@ -1,6 +1,5 @@
 "use strict"
 
-
 //Navigation array
 let navigation = [
     "About", 
@@ -130,7 +129,7 @@ if (viewportWidth < 774) {
 
     tl.fromTo(picOfMe, 1, {opacity: 0, x: "100%"}, {opacity: 1, x: "0%"})
     .fromTo(mainHeading, 1, {opacity: 0, x: "-100%"}, {opacity: 1, x: "0%"}, "-=1")
-    .fromTo(nav, 0.5, {opacity: 0, x: "0%"}, {opacity: 1, x: "1%"})
+    .fromTo(nav, 0.5, {opacity: 0, x: "-50%"}, {opacity: 1, x: "0%"})
     .fromTo(logo, 0.5, {opacity: 0, x: "100%"}, {opacity: 1, x: "0%"}), "-=0.5";
     
 }
@@ -158,7 +157,7 @@ window.addEventListener('resize', function () {
 
         tl.fromTo(picOfMe, 1, {opacity: 0, x: "100%"}, {opacity: 1, x: "0%"})
         .fromTo(mainHeading, 1, {opacity: 0, x: "-100%"}, {opacity: 1, x: "0%"}, "-=1")
-        .fromTo(nav, 0.5, {opacity: 0, x: "0%"}, {opacity: 1, x: "1%"})
+        .fromTo(nav, 0.5, {opacity: 0, x: "-50%"}, {opacity: 1, x: "0%"})
         .fromTo(logo, 0.5, {opacity: 0, x: "100%"}, {opacity: 1, x: "0%"}), "-=0.5";
         
 	}
