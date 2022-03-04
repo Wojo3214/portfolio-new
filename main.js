@@ -79,6 +79,9 @@ function appendNav(){
     document.querySelector(".nav__list").innerHTML = htmlTemplate;
 }
 
+// const sections = document.querySelectorAll("section");
+// const navLi = document.querySelectorAll("nav nav__list nav__list-item");
+
 appendNav();
 
 //Append contact section
@@ -187,10 +190,8 @@ function appendExperience(){
                         </ul>
                     </div>
                 </article>
-            </div>
-            
-        `;
-                
+            </div> 
+        `;        
     }
     document.querySelector(".wrapper").innerHTML = verticalLine + experienceTemplate;
 }
@@ -201,9 +202,6 @@ function appendExperienceDuties(company){
     let duties = [];
     for (const duty of company.duties) {
         console.log(duty);
-        // dutiesTemplate += `
-        //     <li>${duty}</li>
-        // `;
         dutiesTemplate += `<li>${duty}</li>`;
         console.log(dutiesTemplate);
     }
@@ -225,15 +223,15 @@ function appendCV(){
 appendCV();
 
 // Get all the elements to be parallaxed
-const parallaxElements = document.querySelectorAll('.parallax')
+const parallaxElements = document.querySelectorAll('.parallax');
 
 // The parallax function
 const parallax = elements => {
 		if ('undefined' !== elements && elements.length > 0) {
 			elements.forEach( element => {
-				let y = window.innerHeight - element.getBoundingClientRect().top
+				let y = window.innerHeight - element.getBoundingClientRect().top;
 				if (y > 0) {
-					element.style.transform = 'translate3d(-50%, -' + (0.15 * y) + 'px ,0)'
+					element.style.transform = 'translate3d(-50%, -' + (0.15 * y) + 'px ,0)';
 				}
 			})
 		}
@@ -249,25 +247,15 @@ window.onscroll = () => {
 
 //Function opens clicked project
 function openProject(id){
-    if(id=="kunste-project"){
-        console.log("clicked kunste project");
-        document.getElementById("kunste").classList.add('open');
-    } else if(id==="salvatio-project"){
-        console.log("clicked salvatio project");
-        document.getElementById("salvatio").classList.add('open');
-    } else if(id==="arla-project"){
-        console.log("clicked salvatio project");
-        document.getElementById("arla").classList.add('open');
-    } else if(id==="korepetycje-project"){
-        console.log("clicked salvatio project");
-        document.getElementById("korepetycje").classList.add('open');
-    } else if(id==="slepfi-project"){
-        console.log("clicked slepfi project");
-        document.getElementById("slepfi").classList.add('open');
-    } else {
-        console.log("Nothing happened");
+    const project = document.getElementById(id);
+    const projectId = document.getElementById(id).getAttribute("id");
+    console.log("Parameter: "+id);
+    console.log("Project: "+projectId);
+    // console.log("Parameter: "+id);
+
+    if(id == projectId){
+        project.classList.add('open');
     }
-    
 }
 
 //Close project section details
